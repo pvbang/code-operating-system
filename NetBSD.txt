@@ -32,15 +32,17 @@ cp /usr/pkg/share/examples/rc.d/vmtools /etc/rc.d/vmtools
 /* github in netBSD
 pkgin install firefox
 pkgin install git
+
+//
 git config --global http.sslVerify false
+git clone ...
 */
 
 reboot
 
-startx
-
 login: phanvanbang
 passwd: 123456
 
+startx
 
-
+--ps: all "phanvanbang" is name user, if your set another name user, write it :v
