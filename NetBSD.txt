@@ -1,0 +1,46 @@
+whoami
+pkgin update
+pkgin upgrade
+pkgin install bash nano
+bash
+pkgin install xfce4 xfce4-desktop fam tdb gvs xfce4-thunar hal
+
+pwd
+nano .xinitrc
+xfce4-session
+
+pwd
+ln -s .xinitrc .xsession
+ls -al
+cp .xinitrc /home/phanvanbang/
+chown phanvanbang:wheel /home/phanvanbang/.xinitrc
+ln -s /home/phanvanbang/.xinitrc /home/phanvanbang/.xsession
+cp /usr/pkg/share/examples/rc.d/famd /etc/rc.d/
+cp /usr/pkg/share/examples/rc.d/dbus /etc/rc.d/
+cp /usr/pkg/share/examples/rc.d/hal /etc/rc.d/
+
+nano /etc/rc.conf
+rpcbind=YES
+dbus=YES
+hal=YES
+famd=YES
+vmtools=YES
+
+pkgin install open-vm-tools
+cp /usr/pkg/share/examples/rc.d/vmtools /etc/rc.d/vmtools
+
+/* github in netBSD
+pkgin install firefox
+pkgin install git
+git config --global http.sslVerify false
+*/
+
+reboot
+
+startx
+
+login: phanvanbang
+passwd: 123456
+
+
+
